@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">cseproject</string>
+    <string-array name="UserType">
+        <item>Teacher</item>
+        <item>Student</item>
+    </string-array>
+</resources>
