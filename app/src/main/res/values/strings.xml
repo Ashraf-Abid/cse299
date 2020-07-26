@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">cseproject</string>
+    <string name="app_name">Study Assistant</string>
     <string-array name="UserType">
         <item>Teacher</item>
         <item>Student</item>

@@ -32,17 +32,24 @@
         />
 
     <Button
+        android:layout_marginTop="20dp"
         android:id="@+id/signInButtonId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="25dp"
-
+        android:layout_margin="10dp"
         android:background="@color/colorAccent"
         android:text="Sign In"
         android:textColor="@android:color/white"
         android:textSize="10dp"
         android:layout_below="@+id/upload"
         />
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_In_Button_Id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signInButtonId"
+        android:layout_margin="80dp" />
 
     <TextView
         android:id="@+id/signUpTextViewId"
