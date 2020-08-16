@@ -5,17 +5,14 @@
       <config />
     </shared>
   </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3942cf97-6fcc-433c-a3da-3c7556b8db6a" name="Default Changelist" comment="" />
+    <list default="true" id="22ebe503-f055-4738-8288-79d07db841b5" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_XL_API_25" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3a_XL_API_30" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -24,47 +21,19 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <projects_view>
-          <tree_state>
-            <expand />
-            <select />
-          </tree_state>
-        </projects_view>
+        <projects_view />
       </state>
     </system>
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="cseproject" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="resourceFile" />
-        <option value="layoutResourceFile" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectId" id="1ZNNfBHK4Yh6ToWP1UUJiIryNCX" />
+  <component name="ProjectId" id="1g8oQeho124MPlliD4cLPQDpY1l" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_2_XL_API_25" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-08-09T18:23:52.051Z" />
-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-  </component>
-  <component name="RecentsManager">
-    <key name="android.template.packageName">
-      <recent name="com.example.cseproject" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\cse327\cseproject\app" />
-    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -131,26 +100,18 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3942cf97-6fcc-433c-a3da-3c7556b8db6a" name="Default Changelist" comment="" />
-      <created>1580306746379</created>
+      <changelist id="22ebe503-f055-4738-8288-79d07db841b5" name="Default Changelist" comment="" />
+      <created>1597505565297</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1580306746379</updated>
+      <updated>1597505565297</updated>
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="496" y="58" key="#app" timestamp="1590947165580">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1597505613295">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="496" y="58" key="#app/0.0.1536.824@0.0.1536.824" timestamp="1590947165580" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596988112650">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1596988112650" />
-    <state x="763" y="262" key="com.intellij.ide.util.TipDialog" timestamp="1590984996216">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="763" y="262" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1590984996216" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597505613295" />
   </component>
 </project>

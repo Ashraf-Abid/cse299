@@ -17,6 +17,17 @@
         android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="17dp" />
+    <Button
+        android:id="@+id/capture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/colorAccent"
+        android:text="Capture"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        android:layout_below="@+id/upload"
+        />
 
 
     <TextView
@@ -24,11 +35,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/text"
         android:textSize="16sp"
-        android:layout_below="@+id/upload"
+        android:layout_below="@+id/capture"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
         />
-
 
 
 
