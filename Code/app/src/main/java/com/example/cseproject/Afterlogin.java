@@ -40,6 +40,7 @@ public class Afterlogin extends AppCompatActivity {
         mAuth=FirebaseAuth.getInstance();
         setContentView(R.layout.activity_afterlogin);
         Button  uploadBtn=findViewById(R.id.upload);
+        //Button copytext=findViewById(R.id.copytext);
         CaptureImageButton=findViewById(R.id.capture);
 
 
@@ -53,7 +54,7 @@ public class Afterlogin extends AppCompatActivity {
             }
         });
 
-        //upload option
+        //upload optionm
 
         uploadBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,7 +66,17 @@ public class Afterlogin extends AppCompatActivity {
 
             }
         });
-
+        //text copying
+        /*copytext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String CopiedText=mtextView.getText().toString();
+                ClipboardManager clipboardManager=(ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
+                ClipData data=ClipData.newPlainText("image Copied",CopiedText);
+                clipboardManager.setPrimaryClip(data);
+                Toast.makeText(getApplicationContext(),"Text Copied",Toast.LENGTH_LONG).show();
+            }
+        });*/
     }
     //sign Out
 
@@ -97,6 +108,29 @@ public class Afterlogin extends AppCompatActivity {
 
         }
     }
+    //text searcher youtube
+    public String  searchForYoutube(){
+        String S=mtextView.getText().toString();
+        String S1 = new String();
+        S1="https://www.youtube.com/results?search_query=";
+        //S1+=S;
+        //return  S1;
+        for(int i=0;i<S.length();i++){
+            if(S.charAt(i)=='.'){
+                // return S1;
+                break;
+            }
+            S1+=S.charAt(i);
+
+        }
+        return S1;
+    }
+    //Youtube search
+    public void browser1(View view){
+        Intent browserIntet=new Intent(Intent.ACTION_VIEW, Uri.parse(searchForYoutube()));
+        startActivity(browserIntet);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -114,18 +148,17 @@ public class Afterlogin extends AppCompatActivity {
                         mtextView.setText("");
 
                         String text=firebaseVisionText.getText() ;
-
-                        if (text.isEmpty()){
+                        mtextView.append(text);
+                        /*if (text.isEmpty()){
                             mtextView.append("No text found");
                         }
 
                         else{
-                            mtextView.append(text);
 
-                            /*for (FirebaseVisionText.TextBlock block : firebaseVisionText.getTextBlocks()) {
+                            for (FirebaseVisionText.TextBlock block : firebaseVisionText.getTextBlocks()) {
                                 mtextView.append("\n \n" + block.getText());
-                            }*/
-                        }
+                            }
+                        }*/
                     }
                 });
 

@@ -39,6 +39,19 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Search Youtube"
+        android:textAllCaps="false"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        android:id="@+id/button2"
+        android:onClick="browser1"
+        />
+
 
 
 
