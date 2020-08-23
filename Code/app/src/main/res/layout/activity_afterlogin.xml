@@ -52,6 +52,22 @@
         android:onClick="browser1"
         />
 
+<<<<<<< HEAD
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
+        android:text="Search Google"
+        android:textAllCaps="false"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        android:id="@+id/button3"
+        android:onClick="browser2"
+        />
+
+=======
+>>>>>>> 64985aed622b67b6927b943caf623dfae4cabbef
 
 
 
