@@ -51,8 +51,6 @@
         android:id="@+id/button2"
         android:onClick="browser1"
         />
-
-<<<<<<< HEAD
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -66,8 +64,9 @@
         android:onClick="browser2"
         />
 
-=======
->>>>>>> 64985aed622b67b6927b943caf623dfae4cabbef
+
+
+
 
 
 

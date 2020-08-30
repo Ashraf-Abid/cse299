@@ -18,6 +18,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".UploadBook" />
+        <activity android:name=".x" />
         <activity android:name=".SignUp" />
         <activity android:name=".Afterlogin" />
         <activity android:name=".MainActivity">

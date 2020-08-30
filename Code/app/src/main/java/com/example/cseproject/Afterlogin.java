@@ -95,6 +95,11 @@ public class Afterlogin extends AppCompatActivity {
             Intent intent =new Intent(getApplicationContext(),MainActivity.class);
             startActivity(intent);
         }
+        if(item.getItemId()==R.id.uploadBook){
+            Intent intent =new Intent(getApplicationContext(),UploadBook.class);
+            startActivity(intent);
+
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -130,7 +135,8 @@ public class Afterlogin extends AppCompatActivity {
         Intent browserIntet=new Intent(Intent.ACTION_VIEW, Uri.parse(searchForYoutube()));
         startActivity(browserIntet);
     }
-<<<<<<< HEAD
+
+
     //text sercher from Google
     public String  searchFromGoogle(){
         String S=mtextView.getText().toString();
@@ -152,8 +158,7 @@ public class Afterlogin extends AppCompatActivity {
         Intent browserIntet=new Intent(Intent.ACTION_VIEW, Uri.parse(searchFromGoogle()));
         startActivity(browserIntet);
     }
-=======
->>>>>>> 64985aed622b67b6927b943caf623dfae4cabbef
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

@@ -4,5 +4,11 @@
         android:title="Sign Out"
         android:id="@+id/signOutMenuId"
         />
+    <item
+        android:title="Upload Book"
+        android:id="@+id/uploadBook"
+        />
+
+
 
 </menu>
