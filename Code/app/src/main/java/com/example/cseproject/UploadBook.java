@@ -91,15 +91,14 @@ public class UploadBook extends AppCompatActivity {
                 databaseReference.child(databaseReference.push().getKey()).setValue(uploadPdf);
 
 
-
         }
     }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
         @Override
         public void onProgress(@NonNull UploadTask.TaskSnapshot taskSnapshot) {
-            Toast.makeText(UploadBook.this, "Downloading", Toast.LENGTH_SHORT).show();
+            Toast.makeText(UploadBook.this, "After finishing download,will notify you ", Toast.LENGTH_SHORT).show();
         }
     });
-        Toast.makeText(UploadBook.this, "Processing upload", Toast.LENGTH_SHORT).show();
+        Toast.makeText(UploadBook.this, "chill bro,uploading.after finishing, will notify you", Toast.LENGTH_SHORT).show();
 
     }
 

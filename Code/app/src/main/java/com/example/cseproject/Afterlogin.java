@@ -100,7 +100,12 @@ public class Afterlogin extends AppCompatActivity {
             startActivity(intent);
 
         }
+        if(item.getItemId()==R.id.downloadBook){
+            Intent intent=new Intent(getApplicationContext(),View_pdf_file.class);
+            startActivity(intent);
 
+
+        }
         return super.onOptionsItemSelected(item);
     }
     //Camera Related Code
@@ -136,7 +141,6 @@ public class Afterlogin extends AppCompatActivity {
         startActivity(browserIntet);
     }
 
-
     //text sercher from Google
     public String  searchFromGoogle(){
         String S=mtextView.getText().toString();
@@ -158,7 +162,6 @@ public class Afterlogin extends AppCompatActivity {
         Intent browserIntet=new Intent(Intent.ACTION_VIEW, Uri.parse(searchFromGoogle()));
         startActivity(browserIntet);
     }
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

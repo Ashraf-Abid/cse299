@@ -28,6 +28,18 @@
         android:textSize="17dp"
         android:layout_below="@+id/upload"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
+        android:text="Search Google"
+        android:textAllCaps="false"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:textSize="17dp"
+        android:id="@+id/button3"
+        android:onClick="browser2"
+        />
 
 
     <TextView
@@ -51,21 +63,6 @@
         android:id="@+id/button2"
         android:onClick="browser1"
         />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/button2"
-        android:text="Search Google"
-        android:textAllCaps="false"
-        android:background="@color/colorPrimary"
-        android:textColor="@android:color/white"
-        android:textSize="17dp"
-        android:id="@+id/button3"
-        android:onClick="browser2"
-        />
-
-
-
 
 
 

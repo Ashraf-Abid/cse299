@@ -8,7 +8,10 @@
         android:title="Upload Book"
         android:id="@+id/uploadBook"
         />
-
+    <item
+        android:title="View Book"
+        android:id="@+id/downloadBook"
+        />
 
 
 </menu>
