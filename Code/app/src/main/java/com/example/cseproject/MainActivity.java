@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(task.isSuccessful()){
                     Toast.makeText(MainActivity.this,"Successful",Toast.LENGTH_SHORT).show();
                     FirebaseUser user=mAuth.getCurrentUser();
-                    Intent intent = new Intent(getApplicationContext(), Afterlogin.class);
+                    Intent intent = new Intent(getApplicationContext(), Teacher.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                 }
@@ -203,7 +203,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             }
                             if(type.equals("Student")) {
                                 Toast.makeText(MainActivity.this, type, Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(getApplicationContext(), Student.class);
+                                Intent intent = new Intent(getApplicationContext(), Afterlogin.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
                             }

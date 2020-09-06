@@ -27,7 +27,7 @@ import com.google.firebase.ml.vision.text.FirebaseVisionTextRecognizer;
 
 import java.io.IOException;
 
-public class Student extends AppCompatActivity {
+public class Teacher extends AppCompatActivity {
     private TextView mtextView;
     private  Button CaptureImageButton;
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -96,7 +96,9 @@ public class Student extends AppCompatActivity {
             startActivity(intent);
         }
         if(item.getItemId()==R.id.uploadBook){
-            Toast.makeText(Student.this, "You are not a teacher bro.", Toast.LENGTH_SHORT).show();
+            Intent intent =new Intent(getApplicationContext(),UploadBook.class);
+            startActivity(intent);
+
         }
         if(item.getItemId()==R.id.downloadBook){
             Intent intent=new Intent(getApplicationContext(),View_pdf_file.class);
@@ -173,7 +175,7 @@ public class Student extends AppCompatActivity {
             }
             else if(requestCode==100 && resultCode==RESULT_OK) {
                 {
-                    FirebaseVisionImage image = FirebaseVisionImage.fromFilePath(Student.this, data.getData());
+                    FirebaseVisionImage image = FirebaseVisionImage.fromFilePath(Teacher.this, data.getData());
                     FirebaseVisionTextRecognizer recognizer = FirebaseVision.getInstance().getOnDeviceTextRecognizer();
                     mtextView.append("hi i am here");
                     recognizer.processImage(image).addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {

@@ -141,33 +141,6 @@ public class Afterlogin extends AppCompatActivity {
         startActivity(browserIntet);
     }
 
-    //text sercher from Google
-    public String  searchFromGoogle(){
-        String S=mtextView.getText().toString();
-        String S1 = new String();
-        S1="https://www.google.com/search?ei=UZU-X-OqCpT49QOonZ-QDg&q=";
-        //S1+=S;
-        //return  S1;
-        for(int i=0;i<S.length();i++){
-            if(S.charAt(i)=='.'){
-                // return S1;
-                break;
-            }
-            S1+=S.charAt(i);
-
-        }
-        return S1;
-    }
-    public void browser2(View view){
-        Intent browserIntet=new Intent(Intent.ACTION_VIEW, Uri.parse(searchFromGoogle()));
-        startActivity(browserIntet);
-    }
-
-
-
-
-
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
