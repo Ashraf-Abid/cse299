@@ -27,7 +27,7 @@ import com.google.firebase.ml.vision.text.FirebaseVisionTextRecognizer;
 
 import java.io.IOException;
 
-public class Afterlogin extends AppCompatActivity {
+public class Student extends AppCompatActivity {
     private TextView mtextView;
     private  Button CaptureImageButton;
     static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -96,9 +96,7 @@ public class Afterlogin extends AppCompatActivity {
             startActivity(intent);
         }
         if(item.getItemId()==R.id.uploadBook){
-            Intent intent =new Intent(getApplicationContext(),UploadBook.class);
-            startActivity(intent);
-
+            Toast.makeText(Student.this, "You are not a teacher.", Toast.LENGTH_SHORT).show();
         }
         if(item.getItemId()==R.id.downloadBook){
             Intent intent=new Intent(getApplicationContext(),View_pdf_file.class);
@@ -140,7 +138,6 @@ public class Afterlogin extends AppCompatActivity {
         Intent browserIntet=new Intent(Intent.ACTION_VIEW, Uri.parse(searchForYoutube()));
         startActivity(browserIntet);
     }
-
     //text sercher from Google
     public String  searchFromGoogle(){
         String S=mtextView.getText().toString();
@@ -173,7 +170,7 @@ public class Afterlogin extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         try{
             if(requestCode==101 && resultCode==RESULT_OK){
-                //mtextView.setText("I am here right now frans");
+                mtextView.setText("I am here right now frans");
                 Bundle extras=data.getExtras();
                 Bitmap imageBitmap=(Bitmap) extras.get("data");
                 FirebaseVisionImage image= FirebaseVisionImage.fromBitmap(imageBitmap);
@@ -182,11 +179,11 @@ public class Afterlogin extends AppCompatActivity {
                 recognizer.processImage(image).addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
                     @Override
                     public void onSuccess(FirebaseVisionText firebaseVisionText) {
-                        mtextView.setText("");
+
 
                         String text=firebaseVisionText.getText() ;
-                        mtextView.append(text);
-                        /*if (text.isEmpty()){
+                        mtextView.setText("");
+                        if (text.isEmpty()){
                             mtextView.append("No text found");
                         }
 
@@ -195,14 +192,14 @@ public class Afterlogin extends AppCompatActivity {
                             for (FirebaseVisionText.TextBlock block : firebaseVisionText.getTextBlocks()) {
                                 mtextView.append("\n \n" + block.getText());
                             }
-                        }*/
+                        }
                     }
                 });
 
             }
             else if(requestCode==100 && resultCode==RESULT_OK) {
                 {
-                    FirebaseVisionImage image = FirebaseVisionImage.fromFilePath(Afterlogin.this, data.getData());
+                    FirebaseVisionImage image = FirebaseVisionImage.fromFilePath(Student.this, data.getData());
                     FirebaseVisionTextRecognizer recognizer = FirebaseVision.getInstance().getOnDeviceTextRecognizer();
                     mtextView.append("hi i am here");
                     recognizer.processImage(image).addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {

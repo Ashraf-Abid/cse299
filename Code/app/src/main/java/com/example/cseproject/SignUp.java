@@ -101,12 +101,12 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener {
         final String phone=signUpPhoneEditText.getText().toString().trim();
         String password=signUpPasswordEditText.getText().toString().trim();
        if(name.isEmpty()){
-           signUpNameEditText.setError("Enter ur name");
+           signUpNameEditText.setError("Enter your name");
            signUpEmailEditText.requestFocus();
 
        }
        if(phone.isEmpty()){
-           signUpPhoneEditText.setError("Enter ur phone number");
+           signUpPhoneEditText.setError("Enter your phone number");
            signUpEmailEditText.requestFocus();
        }
         if(email.isEmpty()){

@@ -90,6 +90,7 @@ public class UploadBook extends AppCompatActivity {
                 uploadPdf uploadPdf=new uploadPdf(editPDFName.getText().toString(),url.toString());
                 databaseReference.child(databaseReference.push().getKey()).setValue(uploadPdf);
 
+            notification();
 
         }
     }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
@@ -102,6 +103,17 @@ public class UploadBook extends AppCompatActivity {
 
     }
 
+    private void notification() {
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
+            NotificationChannel channel=new NotificationChannel("n","n",NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationManager  manager=getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+            NotificationCompat.Builder builder=new NotificationCompat.Builder(this,"n").setContentText("CSE PROJECT").setSmallIcon(R.drawable.ic_launcher_background).setAutoCancel(true).setContentText("BOOK UPLOADED");
+            NotificationManagerCompat managerCompat=NotificationManagerCompat.from(this);
+            managerCompat.notify(999,builder.build());
+
+        }
+    }
 
 
 }
