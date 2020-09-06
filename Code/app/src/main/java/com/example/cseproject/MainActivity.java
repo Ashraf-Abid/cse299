@@ -197,13 +197,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                             if(type.equals("Teacher")) {
                                 Toast.makeText(MainActivity.this, type, Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(getApplicationContext(), Afterlogin.class);
+                                Intent intent = new Intent(getApplicationContext(), Teacher.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
                             }
                             if(type.equals("Student")) {
                                 Toast.makeText(MainActivity.this, type, Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(getApplicationContext(), Afterlogin.class);
+                                Intent intent = new Intent(getApplicationContext(), Student.class);
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
                             }
