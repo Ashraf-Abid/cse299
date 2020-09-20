@@ -38,7 +38,7 @@ public class Teacher extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mAuth=FirebaseAuth.getInstance();
-        setContentView(R.layout.activity_afterlogin);
+        setContentView(R.layout.activity_teacher);
         Button  uploadBtn=findViewById(R.id.upload);
         //Button copytext=findViewById(R.id.copytext);
         CaptureImageButton=findViewById(R.id.capture);
@@ -140,6 +140,7 @@ public class Teacher extends AppCompatActivity {
         Intent browserIntet=new Intent(Intent.ACTION_VIEW, Uri.parse(searchForYoutube()));
         startActivity(browserIntet);
     }
+
     //text sercher from Google
     public String  searchFromGoogle(){
         String S=mtextView.getText().toString();
@@ -161,7 +162,6 @@ public class Teacher extends AppCompatActivity {
         Intent browserIntet=new Intent(Intent.ACTION_VIEW, Uri.parse(searchFromGoogle()));
         startActivity(browserIntet);
     }
-
 
 
     @Override

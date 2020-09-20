@@ -141,12 +141,35 @@ public class Afterlogin extends AppCompatActivity {
         startActivity(browserIntet);
     }
 
+    //text sercher from Google
+    public String  searchFromGoogle(){
+        String S=mtextView.getText().toString();
+        String S1 = new String();
+        S1="https://www.google.com/search?ei=UZU-X-OqCpT49QOonZ-QDg&q=";
+        //S1+=S;
+        //return  S1;
+        for(int i=0;i<S.length();i++){
+            if(S.charAt(i)=='.'){
+                // return S1;
+                break;
+            }
+            S1+=S.charAt(i);
+
+        }
+        return S1;
+    }
+    public void browser2(View view){
+        Intent browserIntet=new Intent(Intent.ACTION_VIEW, Uri.parse(searchFromGoogle()));
+        startActivity(browserIntet);
+    }
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         try{
             if(requestCode==101 && resultCode==RESULT_OK){
-                //mtextView.setText("I am here right now frans");
+                mtextView.setText("I am here right now frans");
                 Bundle extras=data.getExtras();
                 Bitmap imageBitmap=(Bitmap) extras.get("data");
                 FirebaseVisionImage image= FirebaseVisionImage.fromBitmap(imageBitmap);
@@ -155,11 +178,11 @@ public class Afterlogin extends AppCompatActivity {
                 recognizer.processImage(image).addOnSuccessListener(new OnSuccessListener<FirebaseVisionText>() {
                     @Override
                     public void onSuccess(FirebaseVisionText firebaseVisionText) {
-                        mtextView.setText("");
+
 
                         String text=firebaseVisionText.getText() ;
-                        mtextView.append(text);
-                        /*if (text.isEmpty()){
+                        mtextView.setText("");
+                        if (text.isEmpty()){
                             mtextView.append("No text found");
                         }
 
@@ -168,7 +191,7 @@ public class Afterlogin extends AppCompatActivity {
                             for (FirebaseVisionText.TextBlock block : firebaseVisionText.getTextBlocks()) {
                                 mtextView.append("\n \n" + block.getText());
                             }
-                        }*/
+                        }
                     }
                 });
 
